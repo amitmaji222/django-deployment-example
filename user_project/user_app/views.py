@@ -50,7 +50,7 @@ def register(request):
             # check if they provided a profile picture
             if 'profile_pic' in request.FILES:
                 # if yes then grab it from the POST form reply
-                profile.profile_pic = request.FILES('profile_pic')
+                profile.profile_pic = request.FILES['profile_pic']
                 # Now save model
             profile.save()
             # Registration successful
